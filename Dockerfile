@@ -1,6 +1,6 @@
 FROM armv7/armhf-ubuntu
 
-RUN apt-get update & apt-get install python python-pip
+RUN apt-get update && apt-get install python python-pip
 RUN pip install python-telegram-bot --upgrade
 
 RUN GECKODRIVER_VERSION=`curl https://github.com/mozilla/geckodriver/releases/latest | grep -Po 'v[0-9]+.[0-9]+.[0-9]+'` && \
